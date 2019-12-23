@@ -1,0 +1,14 @@
+FROM python 
+
+RUN apt-get update && apt-get install -y bash tree
+
+RUN pip install dask 
+RUN pip install numpy
+RUN pip install pandas 
+RUN pip install ipython
+USER root
+
+RUN apt-get install -y nano
+
+WORKDIR /home/jovyan
+
